@@ -8,6 +8,7 @@
   "license": "MIT",
   "dependencies": {
     "canvas": "2.8.0",
+    "dotenv": "^16.4.5",
     "emoji-db": "^14.0.1",
     "jimp": "0.16.1",
     "lru-cache": "5.1.1",
