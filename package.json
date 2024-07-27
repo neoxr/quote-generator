@@ -1,0 +1,20 @@
+{
+  "name": "@neoxr/quote-generator",
+  "version": "1.0.0",
+  "description": "Quote Generator from LyoSU",
+  "main": "index.js",
+  "repository": "https://github.com/neoxr/quote-generator",
+  "author": "Wildan Izzudin",
+  "license": "MIT",
+  "dependencies": {
+    "canvas": "2.8.0",
+    "emoji-db": "^14.0.1",
+    "jimp": "0.16.1",
+    "lru-cache": "5.1.1",
+    "object-sizeof": "2.6.5",
+    "runes": "^0.4.3",
+    "sharp": "0.32.5",
+    "smartcrop-sharp": "2.0.8",
+    "telegraf": "^4.16.3"
+  }
+}
