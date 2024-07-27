@@ -13,7 +13,7 @@
     "lru-cache": "5.1.1",
     "object-sizeof": "2.6.5",
     "runes": "^0.4.3",
-    "sharp": "0.32.5",
+    "sharp": "0.32.6",
     "smartcrop-sharp": "2.0.8",
     "telegraf": "^4.16.3"
   }
