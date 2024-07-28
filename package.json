@@ -7,7 +7,6 @@
   "author": "Wildan Izzudin",
   "license": "MIT",
   "dependencies": {
-    "@neoxr/helper": "^1.2.1",
     "@neoxr/quote-api": "^1.1.1",
     "body-parser": "^1.20.2",
     "cfonts": "3.1.1",
