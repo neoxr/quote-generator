@@ -1,6 +1,6 @@
 {
   "name": "@neoxr/quote-api",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Quote Generator by LyoSU",
   "main": "index.js",
   "repository": "https://github.com/neoxr/quote-generator",
