@@ -1,5 +1,5 @@
 const fs = require('fs')
-const psth = require('path')
+const path = require('path')
 const { createCanvas, registerFont } = require('canvas')
 const EmojiDbLib = require('emoji-db')
 const { loadImage } = require('canvas')
