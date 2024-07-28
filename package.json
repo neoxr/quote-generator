@@ -7,6 +7,7 @@
   "author": "Wildan Izzudin",
   "license": "MIT",
   "dependencies": {
+    "canvas": "3.0.0-rc2",
     "dotenv": "^16.4.5",
     "emoji-db": "^14.0.1",
     "jimp": "0.16.1",
