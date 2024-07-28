@@ -7,14 +7,13 @@
   "author": "Wildan Izzudin",
   "license": "MIT",
   "dependencies": {
-    "canvas": "2.8.0",
-    "emoji-db": "^14.0.1",
-    "jimp": "0.16.1",
-    "lru-cache": "5.1.1",
-    "object-sizeof": "2.6.5",
-    "runes": "^0.4.3",
-    "sharp": "0.32.5",
-    "smartcrop-sharp": "2.0.8",
-    "telegraf": "^4.16.3"
+    "@neoxr/helper": "^1.2.1",
+    "@neoxr/quote-api": "^1.0.0",
+    "body-parser": "^1.20.2",
+    "cfonts": "3.1.1",
+    "chalk": "4.1.0",
+    "express": "^4.19.2",
+    "morgan": "^1.10.0",
+    "path": "^0.12.7"
   }
 }
