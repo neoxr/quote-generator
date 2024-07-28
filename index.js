@@ -27,11 +27,11 @@ const runServer = async () => {
    app.disable('x-powered-by')
    app.listen(PORT, () => {
       const CFonts = require('cfonts')
-      CFonts.say('Open-API', {
+      CFonts.say('Quote-API', {
          font: 'tiny',
          align: 'center',
          colors: ['system']
-      }), CFonts.say('Github : https://github.com/neoxr/open-api', {
+      }), CFonts.say('Github : https://github.com/neoxr/quote-generator', {
          colors: ['system'],
          font: 'console',
          align: 'center'

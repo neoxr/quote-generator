@@ -2,10 +2,11 @@ const { Loader, Function: Func, Scraper } = new(require('./lib'))
 const { collection } = require('./lib/system/config')
 const express = require('express')
 const router = express.Router()
+const path = require('path')
 
 const createRouter = async () => {
    try {
-      await Loader.router('./routers')
+      await Loader.router(path.join(__dirname, 'routers'))
       const routers = Object.values(Object.fromEntries(Object.entries(Loader.plugins)))
       routers.map(v => {
          const route = v.routes
