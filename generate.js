@@ -1,4 +1,4 @@
-const { QuoteGenerate } = require('../utils')
+const { QuoteGenerate } = require('./utils')
 const { createCanvas, loadImage } = require('canvas')
 const sharp = require('sharp')
 
@@ -46,10 +46,14 @@ const imageAlpha = (image, alpha) => {
 
 module.exports = async (parm) => {
   // console.log(JSON.stringify(parm, null, 2))
-  if (!parm) return { error: 'query_empty' }
-  if (!parm.messages || parm.messages.length < 1) return { error: 'messages_empty' }
+  if (!parm) return {
+    error: 'query_empty'
+  }
+  if (!parm.messages || parm.messages.length < 1) return {
+    error: 'messages_empty'
+  }
 
-  let botToken = parm.botToken || process.env.BOT_TOKEN
+  let botToken = parm.botToken || process.env.BOT_TOKEN || '1931631238:AAGzOD4od2D7SH8I_0ZiVQwNCMHW39ss1kA'
 
   const quoteGenerate = new QuoteGenerate(botToken)
 
@@ -127,7 +131,11 @@ module.exports = async (parm) => {
 
   let quoteImage
 
-  let { type, format, ext } = parm
+  let {
+    type,
+    format,
+    ext
+  } = parm
 
   if (!type && ext) type = 'png'
   if (type !== 'image' && type !== 'stories' && canvasQuote.height > 1024 * 2) type = 'png'
@@ -139,8 +147,12 @@ module.exports = async (parm) => {
 
     const imageQuoteSharp = sharp(canvasQuote.toBuffer())
 
-    if (canvasQuote.height > canvasQuote.width) imageQuoteSharp.resize({ height: maxHeight })
-    else imageQuoteSharp.resize({ width: maxWidth })
+    if (canvasQuote.height > canvasQuote.width) imageQuoteSharp.resize({
+      height: maxHeight
+    })
+    else imageQuoteSharp.resize({
+      width: maxWidth
+    })
 
     const canvasImage = await loadImage(await imageQuoteSharp.toBuffer())
 
@@ -151,11 +163,18 @@ module.exports = async (parm) => {
 
     const imageSharp = sharp(canvasPadding.toBuffer())
 
-    if (canvasPadding.height >= canvasPadding.width) imageSharp.resize({ height: maxHeight })
-    else imageSharp.resize({ width: maxWidth })
+    if (canvasPadding.height >= canvasPadding.width) imageSharp.resize({
+      height: maxHeight
+    })
+    else imageSharp.resize({
+      width: maxWidth
+    })
 
     if (format === 'png') quoteImage = await imageSharp.png().toBuffer()
-    else quoteImage = await imageSharp.webp({ lossless: true, force: true }).toBuffer()
+    else quoteImage = await imageSharp.webp({
+      lossless: true,
+      force: true
+    }).toBuffer()
   } else if (type === 'image') {
     const heightPadding = 75 * parm.scale
     const widthPadding = 95 * parm.scale
@@ -212,7 +231,10 @@ module.exports = async (parm) => {
     canvasPicCtx.textAlign = 'right'
     canvasPicCtx.fillText('@QuotLyBot', canvasPic.width - 25, canvasPic.height - 25)
 
-    quoteImage = await sharp(canvasPic.toBuffer()).png({ lossless: true, force: true }).toBuffer()
+    quoteImage = await sharp(canvasPic.toBuffer()).png({
+      lossless: true,
+      force: true
+    }).toBuffer()
   } else if (type === 'stories') {
     const canvasPic = createCanvas(720, 1280)
     const canvasPicCtx = canvasPic.getContext('2d')
@@ -260,7 +282,12 @@ module.exports = async (parm) => {
         width: canvasPic.width - minPadding * 2,
         height: canvasPic.height - minPadding * 2,
         fit: 'contain',
-        background: { r: 0, g: 0, b: 0, alpha: 0 }
+        background: {
+          r: 0,
+          g: 0,
+          b: 0,
+          alpha: 0
+        }
       }).toBuffer()
 
       canvasImage = await loadImage(canvasImage)
@@ -284,7 +311,10 @@ module.exports = async (parm) => {
     canvasPicCtx.rotate(-Math.PI / 2)
     canvasPicCtx.fillText('@QuotLyBot', 0, 0)
 
-    quoteImage = await sharp(canvasPic.toBuffer()).png({ lossless: true, force: true }).toBuffer()
+    quoteImage = await sharp(canvasPic.toBuffer()).png({
+      lossless: true,
+      force: true
+    }).toBuffer()
   } else {
     quoteImage = canvasQuote.toBuffer()
   }
