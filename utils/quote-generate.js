@@ -1,4 +1,5 @@
 const fs = require('fs')
+const psth = require('path')
 const { createCanvas, registerFont } = require('canvas')
 const EmojiDbLib = require('emoji-db')
 const { loadImage } = require('canvas')
@@ -14,7 +15,7 @@ const emojiDb = new EmojiDbLib({ useDefaultDb: true })
 
 function loadFont () {
   // console.log('font load start')
-  const fontsDir = 'assets/fonts/'
+  const fontsDir = path.join(__dirname, '../assets/fonts/')
 
   fs.readdir(fontsDir, (_err, files) => {
     files.forEach((file) => {

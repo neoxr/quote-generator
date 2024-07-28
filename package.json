@@ -13,7 +13,7 @@
     "jimp": "0.16.1",
     "lru-cache": "5.1.1",
     "object-sizeof": "2.6.5",
-    "rootpath": "^0.1.2",
+    "path": "^0.12.7",
     "runes": "^0.4.3",
     "sharp": "0.32.5",
     "smartcrop-sharp": "2.0.8",
