@@ -17,8 +17,11 @@ const runServer = async () => {
          extended: true,
          parameterLimit: 50000
       }))
-   app.use('/', await require('./handler'))
-   app.get('*', (req, res) => res.json({
+      .use(express.urlencoded({
+         extended: false
+      }))
+      .use('/', await require('./handler'))
+      .get('*', (req, res) => res.json({
       status: false
    }))
    app.disable('x-powered-by')

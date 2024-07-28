@@ -5,7 +5,8 @@ exports.routes = {
    parameter: ['json'],
    method: 'post',
    execution: async (req, res, next) => {
-      const json = await quoteApi(req.body.json)
+      
+      const json = await quoteApi(req.body)
       res.json(json)
    },
    error: false

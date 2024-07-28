@@ -21,17 +21,16 @@ const createRouter = async () => {
             Func
          })
          
-         // vaidator & requires
-         const requires = (!route.requires ? (req, res, next) => {
-            const reqFn = route.method === 'get' ? 'reqGet' : 'reqPost'
-            const check = global.status[reqFn](req, route.parameter)
-            if (!check.status) return res.json(check)
-            if ('url' in req.query) {
-               const isUrl = global.status.url(req.query.url)
-               if (!isUrl.status) return res.json(isUrl)
-               next()
-            } else next()
-         }: route.requires)
+         // error
+         const error = (route.error ? (req, res, next) => {
+            res.json({
+               creator: global.creator,
+               status: false,
+               msg: `Sorry, this feature is currently error and will be fixed soon`
+            })
+         } : (req, res, next) => {
+            next()
+         })
 
          // custom validator
          const validator = (route.validator ? route.validator: (req, res, next) => {
@@ -39,7 +38,7 @@ const createRouter = async () => {
          })
          
          // compile router
-         router[route.method](route.path, requires, validator, route.execution)
+         router[route.method](route.path, validator, route.execution)
          if (router.stack.length === routers.length) return
       })
       
