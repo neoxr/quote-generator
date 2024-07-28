@@ -324,10 +324,10 @@
     file-type "~16.5.2"
     form-data "~4.0.0"
 
-"@neoxr/quote-api@^1.0.1":
-  version "1.0.1"
-  resolved "https://registry.yarnpkg.com/@neoxr/quote-api/-/quote-api-1.0.1.tgz#6a599029b544dd1ec2dd12f7ba7535b2344c7c3a"
-  integrity sha512-2GHl2eDrobFW3Gcqtvf20x03aFywj4Ed2OQ9G02lq4eEz2dac6VZSyMlhcsTiXhi0OInZ7nWQzLfxaKJTV+UFw==
+"@neoxr/quote-api@^1.1.1":
+  version "1.1.1"
+  resolved "https://registry.yarnpkg.com/@neoxr/quote-api/-/quote-api-1.1.1.tgz#ae2b6074d04fe8d315521f5d2835db9fe01bf176"
+  integrity sha512-1chEYzLDzjd8/q8Bgjq8iviA0Yh6pSCR57PRcLI/qCv+asUChJnYE/PTZ2zgUqs61XiOdYtTCzr0zJWMPqpCSw==
   dependencies:
     canvas "2.8.0"
     dotenv "^16.4.5"
