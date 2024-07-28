@@ -324,10 +324,10 @@
     file-type "~16.5.2"
     form-data "~4.0.0"
 
-"@neoxr/quote-api@^0.0.1":
-  version "1.0.0"
-  resolved "https://registry.yarnpkg.com/@neoxr/quote-api/-/quote-api-1.0.0.tgz#76ea91b7d05588128a2e9e433fcbc44da44ed83e"
-  integrity sha512-O7o+d6l/mQlvKtUzmVc/rYgkBdaPeKvCqYapGVmuujTIs85RnF86lal0SX0OCL6QEmrYkAvjJbXxOrLpxYDMCg==
+"@neoxr/quote-api@^1.0.1":
+  version "1.0.1"
+  resolved "https://registry.yarnpkg.com/@neoxr/quote-api/-/quote-api-1.0.1.tgz#6a599029b544dd1ec2dd12f7ba7535b2344c7c3a"
+  integrity sha512-2GHl2eDrobFW3Gcqtvf20x03aFywj4Ed2OQ9G02lq4eEz2dac6VZSyMlhcsTiXhi0OInZ7nWQzLfxaKJTV+UFw==
   dependencies:
     canvas "2.8.0"
     dotenv "^16.4.5"
@@ -335,7 +335,7 @@
     jimp "0.16.1"
     lru-cache "5.1.1"
     object-sizeof "2.6.5"
-    rootpath "^0.1.2"
+    path "^0.12.7"
     runes "^0.4.3"
     sharp "0.32.5"
     smartcrop-sharp "2.0.8"
@@ -1759,11 +1759,6 @@ rimraf@^3.0.2:
   integrity sha512-JZkJMZkAGFFPP2YqXZXPbMlMBgsxzE8ILs4lMIX/2o0L9UBw9O/Y3o6wFw/i9YLapcUJWwqbi3kdxIPdC62TIA==
   dependencies:
     glob "^7.1.3"
-
-rootpath@^0.1.2:
-  version "0.1.2"
-  resolved "https://registry.yarnpkg.com/rootpath/-/rootpath-0.1.2.tgz#5b379a87dca906e9b91d690a599439bef267ea6b"
-  integrity sha512-R3wLbuAYejpxQjL/SjXo1Cjv4wcJECnMRT/FlcCfTwCBhaji9rWaRCoVEQ1SPiTJ4kKK+yh+bZLAV7SCafoDDw==
 
 runes@^0.4.3:
   version "0.4.3"

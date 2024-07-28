@@ -2,12 +2,11 @@ const quoteApi = require('@neoxr/quote-api')
 exports.routes = {
    category: 'main',
    path: '/',
-   parameter: ['json'],
-   method: 'post',
+   method: 'get',
    execution: async (req, res, next) => {
-      
-      const json = await quoteApi(req.body)
-      res.json(json)
+      res.json({
+         creator: global.creator
+      })
    },
    error: false
 }
